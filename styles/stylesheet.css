@@ -52,7 +52,7 @@ h1 {
   margin: 0.5em 5em;
   position: relative;
   top: 1em;
-
+  z-index: -1;
 }
 .inner {
   width: 100%;
