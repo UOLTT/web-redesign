@@ -5,6 +5,8 @@
 <head>
 
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UOLTT Conglomerate</title>
   <link rel="stylesheet" href="styles\stylesheet.css">
 
@@ -12,11 +14,28 @@
 
 <body>
 
+  <script type="text/javascript">
+
+    window.onclick = function(event) {
+      if (!event.target.matches('.menuIcon')) {
+
+        var dropdowns = document.getElementsByClassName("dropContent");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
+
   <header>
 
     <h1>UOLTT Conglomerate</h1>
 
-    <div class="topnav" id="myTopnav">
+    <div class="menuBar" id="mainMenu">
 
       <a href="index.html">Home</a>
 
@@ -34,12 +53,36 @@
 
       <a href="#allposts">All Posts</a>
 
+      <script type="text/javascript">
+      function menuDrop() {
+        document.getElementById("dropMenu").classList.toggle("show");
+      }
+      </script>
+      <a href="javascript:void(0);" class="menuIcon" onclick="menuDrop()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </a>
     </div>
 
-    <div class="container">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+    <div class="dropContent" id="dropMenu">
+
+      <a href="index.html">Home</a>
+
+      <a href="development.html">Development</a>
+
+      <a href="ingame.html">In Game</a>
+
+      <a href="community.html">Community</a>
+
+      <a href="forums.html">Forums</a>
+
+      <a href="updates.html">Game Updates</a>
+
+      <a href="faq.html">FAQ</a>
+
+      <a href="#allposts">All Posts</a>
+
     </div>
 
   </header>
